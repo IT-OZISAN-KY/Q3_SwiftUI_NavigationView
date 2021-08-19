@@ -22,7 +22,7 @@ struct FirstView: View {
             VStack {
                 NavigationLink("２番目へ", destination: SecondView(through: false))
                     .padding()
-                // １：３番目へ
+                // Q１：３番目へ
             }
             .navigationTitle("１番目")
             // Navigationのタイトルを小さく
@@ -39,7 +39,7 @@ struct SecondView: View {
     
     var body: some View {
         VStack {
-            // ２：thirdのONで、３番目の画面に自動に移動
+            // Q２：thirdのONで、３番目の画面に自動に移動
             Button(action: {
                 // 画面を閉じる
                 self.presentationMode.wrappedValue.dismiss()
@@ -50,7 +50,7 @@ struct SecondView: View {
         .navigationTitle("２番目")
         .navigationBarTitleDisplayMode(.inline)
         .onAppear{
-            // ３、通過の場合、タイマーで１秒後に３番目に移動
+            // Q３、通過の場合、タイマーで１秒後に３番目に移動
         }
     }
 }
